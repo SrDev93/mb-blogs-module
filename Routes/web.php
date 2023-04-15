@@ -12,7 +12,7 @@
 */
 use \Illuminate\Support\Facades\Route;
 
-Route::prefix('')->middleware('auth')->group(function() {
+Route::prefix('admin')->middleware('auth')->group(function() {
     Route::resource('BlogCategory', 'BlogCategoryController');
     Route::post('BlogCategory-sort', 'BlogCategoryController@sort_item')->name('BlogCategory-sort');
 

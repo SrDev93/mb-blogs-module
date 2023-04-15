@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class BlogCategory extends Model
 {
     use HasFactory;
-    use Sluggable;
+//    use Sluggable;
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
@@ -44,12 +44,12 @@ class BlogCategory extends Model
         return \Modules\Blogs\Database\factories\BlogCategoryFactory::new();
     }
 
-    public function sluggable(): array
-    {
-        return [
-            'slug' => [
-                'source' => 'name'
-            ]
-        ];
-    }
+//    public function sluggable(): array
+//    {
+//        return [
+//            'slug' => [
+//                'source' => 'name'
+//            ]
+//        ];
+//    }
 }

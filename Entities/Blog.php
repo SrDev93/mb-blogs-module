@@ -14,7 +14,7 @@ use Modules\Base\Entities\Visit;
 class Blog extends Model
 {
     use HasFactory;
-    use Sluggable;
+//    use Sluggable;
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
@@ -56,12 +56,12 @@ class Blog extends Model
         return \Modules\Blogs\Database\factories\BlogFactory::new();
     }
 
-    public function sluggable(): array
-    {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
-    }
+//    public function sluggable(): array
+//    {
+//        return [
+//            'slug' => [
+//                'source' => 'title'
+//            ]
+//        ];
+//    }
 }
